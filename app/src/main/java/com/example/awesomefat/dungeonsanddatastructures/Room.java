@@ -34,8 +34,32 @@ public class Room
 
     public boolean takeExit(String direction)
     {
-        System.out.println(this.exits.get(direction));
-        return true;
+        Exit e = this.exits.get(direction);
+        if (e == null){
+            return false;
+        }
+        else {
+
+            return true;
+        }
+    }
+
+    public void printRoom(){
+        System.out.println("Current Location: "+this.name);
+        System.out.println("Description: " + this.description);
+        System.out.println("Players in "+this.name+": ");
+        for(int a =0; a<this.players.size(); a++){
+            Player currentPlayer = this.players.get(a);
+            System.out.print(a+". ");
+            currentPlayer.printPlayer();
+            System.out.println();
+        }
+        System.out.println("Available Exits:");
+        for(int a=0; a<this.exits.size(); a++){
+            Exit currentExit = this.exits.get(a);
+            System.out.println(this.exits.keys());
+            this.exits.keys().nextElement();
+        }
     }
 
     //Player management

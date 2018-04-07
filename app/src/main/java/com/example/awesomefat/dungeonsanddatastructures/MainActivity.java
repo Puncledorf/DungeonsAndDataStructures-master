@@ -22,6 +22,9 @@ public class MainActivity extends AppCompatActivity {
 
         s120.addPlayer(p);
 
+        s120.printRoom();
+        csHallway.printRoom();
+
         s120.addExit("north", s120_csHallway);
         csHallway.addExit("south", s120_csHallway);
         s120.takeExit("north");

@@ -14,6 +14,9 @@ public class Player
         this.name = name;
         this.currentRoom = null;
     }
+    public void printPlayer(){
+        System.out.print(this.name);
+    }
 
     public String getName() {
         return name;

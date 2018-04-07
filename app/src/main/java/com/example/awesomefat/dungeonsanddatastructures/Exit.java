@@ -18,10 +18,12 @@ public class Exit
     public void takeExit(Player p)
     {
         if (p.getCurrentRoom()==r1){
-            p.setCurrentRoom(r2);
+            r1.removePlayer(p);
+            r2.addPlayer(p);
         }
         else{
-            p.setCurrentRoom(r1);
+            r2.removePlayer(p);
+            r1.addPlayer(p);
         }
         //make the player move to the room they are NOT currently in.
     }
